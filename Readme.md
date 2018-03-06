@@ -1,7 +1,8 @@
 ﻿# Homework 2
 
 Выполнил - [Андрей Лейкин](https://vk.com/id32952099)
-Курс - Loftschool - node.js
+
+Курс - Loftschool - Node.js
 
 Список переменных окружений для первой задачи
 
