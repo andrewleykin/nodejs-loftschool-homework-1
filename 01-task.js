@@ -1,14 +1,18 @@
 const http = require('http');
+const timeInteral = 1000;
+const timeOut = 10000;
+const port = 3000;
 
 http.createServer((req, res) => {
   const interval = setInterval(() => {
     console.log(new Date().toUTCString());
-  }, 1000);
-  SetTimeoutPromisy(10000).then(() => {
+  }, process.env.TIME_INTERVAL || timeInteral);
+
+  SetTimeoutPromisy(process.env.TIMEOUT || timeOut).then(() => {
     clearInterval(interval);
-    console.log('done');
     res.end(new Date().toUTCString());
   });
+
   function SetTimeoutPromisy (totalSecond) {
     return new Promise(function (resolve, reject) {
       setTimeout(() => {
@@ -16,4 +20,4 @@ http.createServer((req, res) => {
       }, totalSecond);
     });
   }
-}).listen(3000);
+}).listen(process.env.PORT || port);
