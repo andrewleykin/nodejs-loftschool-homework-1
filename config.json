@@ -6,8 +6,8 @@
       "port": 465,
       "secure": true,
       "auth": {
-        "user": "andrewleykin1328@gmail.com",
-        "pass": "katerina1328"
+        "user": "your gmail",
+        "pass": "your password"
       }
     }
   }
